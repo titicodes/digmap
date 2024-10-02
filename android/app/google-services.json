@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "512251626680",
+    "project_id": "gigmap-96097",
+    "storage_bucket": "gigmap-96097.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512251626680:android:bfc88fd6bfa083cf66604d",
+        "android_client_info": {
+          "package_name": "com.example.digmap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByFkdFEAe9gswJUzQcAhuGNsGOu4GSKi0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

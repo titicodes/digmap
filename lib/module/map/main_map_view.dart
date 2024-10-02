@@ -10,6 +10,32 @@ class MainMapView extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<MapController>(
       builder: (MapController controller) => Scaffold(
+        appBar: AppBar(
+          title: TextField(
+            decoration: const InputDecoration(
+              hintText: 'Search infrastructure...',
+              hintStyle: TextStyle(color: Colors.white60),
+              border: InputBorder.none,
+            ),
+            style: const TextStyle(color: Colors.white),
+            onChanged:
+                controller.onSearchChanged, // Call search method on text change
+          ),
+          actions: [
+            PopupMenuButton<String>(
+              onSelected: controller.onFilterChanged,
+              itemBuilder: (BuildContext context) {
+                return ['Hospital', 'School', 'Fire Station', 'Police Station']
+                    .map((String choice) {
+                  return PopupMenuItem<String>(
+                    value: choice,
+                    child: Text(choice),
+                  );
+                }).toList();
+              },
+            ),
+          ],
+        ),
         body: Stack(
           children: [
             GoogleMap(
@@ -19,6 +45,7 @@ class MainMapView extends StatelessWidget {
                 zoom: 14.0,
               ),
               myLocationEnabled: true, // Enable the location button on the map
+              markers: Set<Marker>.of(controller.markers),
             )
           ],
         ),
