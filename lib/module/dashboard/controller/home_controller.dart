@@ -100,8 +100,8 @@ class HomeController extends GetxController {
   try {
     await _firestore.collection('infrastructure').add(infrastructure);
     Get.snackbar("Success", "Infrastructure saved to Firebase.");
-  } catch (e) {
-    Get.snackbar("Error", "Failed to save infrastructure: $e");
+  } catch (err) {
+    Get.snackbar("Error", "Failed to save infrastructure: $err");
   }
 }
 
