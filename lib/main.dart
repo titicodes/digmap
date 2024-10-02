@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
               ColorScheme.fromSeed(seedColor: const Color(0xff009933))),
       // initialRoute: splashScreen,
       initialRoute: mainMapView,
-      getPages: getPages,
+      
     );
   }
 }
