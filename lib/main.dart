@@ -1,7 +1,6 @@
 import 'package:digmap/firebase_options.dart';
 import 'package:digmap/module/map/controller/map_controller.dart';
-import 'package:digmap/routes/app-route-names.dart';
-import 'package:digmap/routes/app-routes.dart';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
